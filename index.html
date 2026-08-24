@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080705">
+<meta name="description" content="RENUEVA - Masajes terapéuticos y relajantes en Villa Ansina y Tacuarembó.">
+<title>RENUEVA | Masajes terapéuticos y relajantes</title>
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+:root{
+  --bg:#070605; --panel:#11100d; --panel2:#17130e; --gold:#d99a4c;
+  --gold2:#f2c17b; --cream:#f5e2c2; --muted:#b9a88f; --line:#5d3d1d;
+  --ok:#25d366; --shadow:0 18px 50px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;
+  background:
+    radial-gradient(circle at 50% 0,rgba(37,23,7,.93) 0,rgba(9,7,5,.95) 35%,rgba(5,4,3,.98) 100%),
+    url('https://images.pexels.com/photos/6187268/pexels-photo-6187268.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover fixed no-repeat;
+  color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.45}
+a{color:inherit;text-decoration:none}
+.ico{display:inline-block;vertical-align:-4px;width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.icon .ico{width:30px;height:30px;color:var(--gold2);vertical-align:0}
+.bigicon .ico{width:44px;height:44px;color:var(--gold2);vertical-align:0}
+.number .ico{width:16px;height:16px}
+.promo .ico{width:18px;height:18px;color:var(--gold2)}
+.contact .ico{width:17px;height:17px;color:var(--gold2)}
+.mobile-menu .ico{width:24px;height:24px;color:var(--gold2)}
+button,input,select,textarea{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(5,4,3,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(217,154,76,.25)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:Georgia,serif;letter-spacing:9px;font-size:25px;color:var(--gold2)}
+.logo small{display:block;font-family:Arial;letter-spacing:2px;font-size:8px;text-align:center;color:#b99160;margin-top:-3px}
+nav{display:flex;gap:24px;font-size:13px;color:#dbc7aa}
+nav a:hover{color:#fff}
+.btn{border:0;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#f0bd76,#bd7430);color:#180d04;font-weight:700;cursor:pointer;box-shadow:0 7px 20px rgba(190,112,42,.22)}
+.btn.outline{background:transparent;color:var(--gold2);border:1px solid var(--gold)}
+.btn.whatsapp{background:#25d366;color:#071006}
+.mobile-menu{display:none;background:none;border:0;color:var(--gold2);font-size:26px}
+
+.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-100px;top:40px;background:radial-gradient(circle,rgba(232,160,70,.35),transparent 65%);filter:blur(25px);z-index:-1}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:13px}
+h1{font:clamp(42px,6vw,76px)/1.03 Georgia,serif;margin:15px 0;color:#f2d4a5}
+.hero h1 span{color:#c98942}
+.hero p{max-width:560px;color:#c8b69e;font-size:18px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-art{height:530px;border-radius:40% 50% 45% 50%;position:relative;overflow:hidden;border:1px solid rgba(217,154,76,.3);box-shadow:var(--shadow)}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-art .glow{position:absolute;inset:0;background:linear-gradient(145deg,transparent 40%,rgba(0,0,0,.25),transparent 70%)}
+
+section{padding:70px 0}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font:38px Georgia,serif;color:#edc27f;margin:0 0 8px}
+.section-title p{color:#a9957b;margin:0}
+.gold-line{width:90px;height:1px;background:var(--gold);margin:15px auto}
+
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{background:linear-gradient(150deg,rgba(38,25,13,.88),rgba(13,11,8,.96));border:1px solid rgba(184,120,50,.55);border-radius:18px;padding:20px;display:flex;flex-direction:column;min-height:300px;box-shadow:var(--shadow)}
+.number{width:32px;height:32px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-weight:bold;margin-bottom:15px}
+.icon{font-size:30px;margin-bottom:12px}
+.card h3{font:18px Georgia,serif;color:#edc27f;margin:0 0 5px}
+.duration{font-size:12px;color:#c48a4e}
+.card p{font-size:13px;color:#b7a791;flex:1}
+.price{font:22px Georgia,serif;color:#f2bd71;margin:10px 0 14px}
+.smallbtn{padding:10px 15px;border-radius:20px;border:1px solid #bd7e37;background:#b97834;color:#160c04;font-weight:bold;cursor:pointer}
+
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.mode{border:1px solid rgba(184,120,50,.55);border-radius:22px;padding:30px;background:linear-gradient(140deg,#211509,#0e0b08);min-height:260px}
+.mode .bigicon{font-size:44px}.mode h3{font:27px Georgia,serif;color:#edc27f;margin:10px 0}.mode p{color:#b9a68d}.mode strong{color:#f0c27d}
+
+.booking-wrap{display:grid;grid-template-columns:1.5fr .7fr;gap:20px}
+.booking,.promos,.contact{background:linear-gradient(145deg,#1a120a,#0c0a07);border:1px solid rgba(184,120,50,.5);border-radius:22px;padding:28px}
+.booking h3,.promos h3,.contact h3{font:25px Georgia,serif;color:#edc27f;margin-top:0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field label{display:block;font-size:12px;color:#c2af95;margin:0 0 6px}
+.field input,.field select,.field textarea{width:100%;background:#eee5d8;color:#20170f;border:0;border-radius:10px;padding:13px;outline:none}
+.field textarea{min-height:90px;resize:vertical}
+.full{grid-column:1/-1}
+.booking .btn{width:100%;margin-top:16px;font-size:16px}
+.notice{font-size:12px;color:#9e8d76;margin-top:10px}
+.promo{padding:14px;border:1px solid rgba(217,154,76,.25);border-radius:14px;margin-bottom:10px;background:#100d09}
+.promo b{color:#f1bd75}.promo span{display:block;color:#b6a28a;font-size:13px}
+.contact p{color:#bca98e}.contact a{color:#f0bf77}
+footer{padding:45px 0;border-top:1px solid rgba(217,154,76,.2);text-align:center;color:#8f7e69}
+.footer-logo{font:30px Georgia,serif;letter-spacing:8px;color:#dba15a}
+
+#toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,120px);background:#1c140b;border:1px solid #9f682e;color:#f5dbb3;padding:14px 20px;border-radius:14px;z-index:100;transition:.3s;box-shadow:var(--shadow);max-width:90%;text-align:center}
+#toast.show{transform:translate(-50%,0)}
+
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){
+  nav{display:none}.mobile-menu{display:block}.nav>.btn{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto;padding:70px 0 30px}.hero-art{height:300px;order:-1}
+  .hero-art .word{font-size:25px}
+  .grid{grid-template-columns:1fr 1fr}.modes,.booking-wrap{grid-template-columns:1fr}
+}
+@media(max-width:500px){
+  .grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}
+  section{padding:50px 0}.hero p{font-size:16px}.hero-actions .btn{width:100%}
+  .card{min-height:270px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="ico-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></symbol>
+<symbol id="ico-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.4A8.3 8.3 0 0 1 8 18.8L3 20l1.3-4.8A8.4 8.4 0 1 1 21 11.5Z"/></symbol>
+<symbol id="ico-home" viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></symbol>
+<symbol id="ico-car" viewBox="0 0 24 24"><path d="M4 16V11l2-5h12l2 5v5"/><path d="M4 16h16"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></symbol>
+<symbol id="ico-flame" viewBox="0 0 24 24"><path d="M12 3s5 4.2 5 9.2A5 5 0 0 1 7 12c0-1.2.5-2 1.1-2.8.3.9 1 1.4 1.7 1.4-.3-3 1-4.3 2.2-7.6Z"/></symbol>
+<symbol id="ico-couple" viewBox="0 0 24 24"><circle cx="8" cy="7" r="2.4"/><circle cx="16" cy="7" r="2.4"/><path d="M3 20v-2.5A3.5 3.5 0 0 1 6.5 14h3A3.5 3.5 0 0 1 13 17.5V20"/><path d="M11 20v-2.5a3.5 3.5 0 0 1 3.5-3.5h3A3.5 3.5 0 0 1 21 17.5V20"/></symbol>
+<symbol id="ico-phone" viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z"/></symbol>
+<symbol id="ico-camera" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.8"/><path d="M8 6l1.5-2h5L16 6"/></symbol>
+<symbol id="ico-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
+<symbol id="ico-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+<symbol id="ico-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+<symbol id="ico-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12"/><path d="M11 12V4a1.5 1.5 0 0 1 3 0v8"/><path d="M14 12V5.2a1.5 1.5 0 0 1 3 0V13"/><path d="M17 9.5a1.5 1.5 0 0 1 3 0V15c0 4-2.7 6.5-6.5 6.5S6 18.5 6 15v-3.2c0-.8.6-1.5 1.4-1.5.7 0 1.3.5 1.5 1.2"/></symbol>
+<symbol id="ico-fist" viewBox="0 0 24 24"><path d="M7 12V7a1.4 1.4 0 0 1 2.8 0v4"/><path d="M9.8 11V5.3a1.4 1.4 0 0 1 2.8 0V11"/><path d="M12.6 11V6.2a1.4 1.4 0 0 1 2.8 0V13"/><path d="M15.4 9.6a1.4 1.4 0 0 1 2.8 0V15c0 3.9-2.5 6.5-6 6.5-2.6 0-4.3-1-5.7-3L4 14.6c-.5-.8-.2-1.8.6-2.2.8-.4 1.7-.1 2.2.6l1.2 1.8"/></symbol>
+<symbol id="ico-drop" viewBox="0 0 24 24"><path d="M12 3s6 7 6 11.5a6 6 0 0 1-12 0C6 10 12 3 12 3Z"/></symbol>
+<symbol id="ico-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/><path d="M19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7Z"/></symbol>
+<symbol id="ico-lotus" viewBox="0 0 24 24"><path d="M12 21c-4-1-6-4-6-7.5C6 10 8.5 8 12 6c3.5 2 6 4 6 7.5 0 3.5-2 6.5-6 7.5Z"/><path d="M12 6v15M6 13.5c2 0 4 1 6 3.5M18 13.5c-2 0-4 1-6 3.5"/></symbol>
+<symbol id="ico-stone" viewBox="0 0 24 24"><ellipse cx="12" cy="18" rx="7" ry="3"/><ellipse cx="12" cy="12.5" rx="5.4" ry="2.4"/><ellipse cx="12" cy="8" rx="3.6" ry="1.8"/></symbol>
+<symbol id="ico-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 12 4 20 4c0 8-6 15-15 15Z"/><path d="M5 19c3-5 7-8 11-10"/></symbol>
+<symbol id="ico-heart" viewBox="0 0 24 24"><path d="M12 20S3 14.5 3 8.8A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 9 1.8C21 14.5 12 20 12 20Z"/></symbol>
+</defs>
+</svg>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="logo">RENUEVA<small>TU CUERPO, LIBERA TU VITALIDAD</small></a>
+    <nav>
+      <a href="#inicio">Inicio</a><a href="#masajes">Masajes</a><a href="#agenda">Agenda</a><a href="#promociones">Promociones</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#agenda" class="btn"><svg class="ico"><use href="#ico-calendar" xlink:href="#ico-calendar"/></svg> Reservar ahora</a>
+    <button class="mobile-menu" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='flex'?'none':'flex'"><svg class="ico"><use href="#ico-menu" xlink:href="#ico-menu"/></svg></button>
+  </div>
+</header>
+
+<main>
+<section id="inicio">
+<div class="container hero">
+  <div>
+    <div class="eyebrow">Masajes terapéuticos y relajantes</div>
+    <h1>RENUEVA<br><span>tu cuerpo</span></h1>
+    <p>Tu bienestar es nuestra prioridad. Masajes pensados para aliviar tensiones, relajar el cuerpo y ayudarte a recuperar tu vitalidad.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#agenda"><svg class="ico"><use href="#ico-calendar" xlink:href="#ico-calendar"/></svg> Reservar turno</a>
+    </div>
+    <div class="hero-actions" style="margin-top:12px">
+      <a class="btn outline" id="heroWhatsapp" target="_blank"><svg class="ico"><use href="#ico-chat" xlink:href="#ico-chat"/></svg> Escribir por WhatsApp</a>
+      <a class="btn outline" id="heroInstagram" target="_blank" rel="noopener"><svg class="ico"><use href="#ico-camera" xlink:href="#ico-camera"/></svg> Seguinos en Instagram</a>
+    </div>
+  </div>
+  <div class="hero-art"><img src="assets/renueva-header.jpg" alt="RENUEVA - Masajes terapéuticos y relajantes, tu cuerpo libera tu vitalidad"><div class="glow"></div></div>
+</div>
+</section>
+
+<section id="masajes">
+<div class="container">
+  <div class="section-title"><h2>Nuestros masajes</h2><div class="gold-line"></div><p>Elegí el tratamiento que mejor se adapte a vos.</p></div>
+  <div class="grid" id="services"></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-title"><h2>Elegí tu modalidad</h2><div class="gold-line"></div><p>Atención en local o en la comodidad de tu hogar.</p></div>
+  <div class="modes">
+    <div class="mode"><div class="bigicon"><svg class="ico"><use href="#ico-home" xlink:href="#ico-home"/></svg></div><h3>En nuestro local</h3><p>Un espacio cálido y preparado para que disfrutes tu momento de relajación.</p><strong>Villa Ansina · Tacuarembó</strong></div>
+    <div class="mode"><div class="bigicon"><svg class="ico"><use href="#ico-car" xlink:href="#ico-car"/></svg></div><h3>A domicilio</h3><p>Llevamos el bienestar hasta vos con equipamiento preparado para realizar el servicio en tu hogar.</p><strong>Villa Ansina · Tacuarembó</strong></div>
+  </div>
+</div>
+</section>
+
+<section id="agenda">
+<div class="container">
+  <div class="section-title"><h2>Agendá tu turno</h2><div class="gold-line"></div><p>Completá tus datos y confirmá la reserva por WhatsApp.</p></div>
+  <div class="booking-wrap">
+    <form class="booking" id="bookingForm">
+      <h3>Tu reserva</h3>
+      <div class="form-grid">
+        <div class="field full"><label>Masaje</label><select id="service" required></select></div>
+        <div class="field"><label>Modalidad</label><select id="mode" required><option value="Local">En nuestro local</option><option value="Domicilio">A domicilio</option></select></div>
+        <div class="field"><label>Localidad</label><select id="city" required><option>Villa Ansina</option><option>Tacuarembó</option></select></div>
+        <div class="field"><label>Fecha</label><input id="date" type="date" required></div>
+        <div class="field"><label>Hora</label><select id="time" required></select></div>
+        <div class="field"><label>Nombre</label><input id="name" placeholder="Tu nombre" required></div>
+        <div class="field"><label>Teléfono</label><input id="phone" type="tel" placeholder="Tu teléfono" required></div>
+        <div class="field full"><label>Notas (opcional)</label><textarea id="notes" placeholder="Preferencias, consulta o información adicional"></textarea></div>
+      </div>
+      <button class="btn whatsapp" type="submit"><svg class="ico"><use href="#ico-chat" xlink:href="#ico-chat"/></svg> Confirmar por WhatsApp</button>
+      <div class="notice">La solicitud se enviará por WhatsApp para confirmar disponibilidad. Este HTML no bloquea automáticamente el horario.</div>
+    </form>
+
+    <aside>
+      <div class="promos" id="promociones">
+        <h3>Promociones</h3>
+        <div class="promo"><b><svg class="ico"><use href="#ico-flame" xlink:href="#ico-flame"/></svg> Promo inauguración</b><span>Masaje relajante 60 min · <s>$1.200</s> → <strong>$990</strong></span></div>
+        <div class="promo"><b><svg class="ico"><use href="#ico-couple" xlink:href="#ico-couple"/></svg> Promo pareja</b><span>2 masajes de 60 min · <strong>$1.800</strong></span></div>
+        <div class="promo"><b><svg class="ico"><use href="#ico-home" xlink:href="#ico-home"/></svg> Promo domicilio</b><span>Consultá el costo según la zona.</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+</section>
+
+<section id="contacto">
+<div class="container">
+  <div class="section-title"><h2>Contacto</h2><div class="gold-line"></div><p>Estamos para ayudarte a encontrar tu momento de bienestar.</p></div>
+  <div class="booking-wrap">
+    <div class="contact">
+      <h3>RENUEVA</h3>
+      <p><svg class="ico"><use href="#ico-chat" xlink:href="#ico-chat"/></svg> WhatsApp: <a id="contactWhatsapp" target="_blank">+598 98 380 566</a></p>
+      <p><svg class="ico"><use href="#ico-phone" xlink:href="#ico-phone"/></svg> Teléfono: <span id="contactPhone">+598 98 380 566</span></p>
+      <p><svg class="ico"><use href="#ico-camera" xlink:href="#ico-camera"/></svg> Instagram: <a id="instagramLink" href="https://www.instagram.com/renueva_libera/" target="_blank" rel="noopener">@renueva_libera</a></p>
+      <p><svg class="ico"><use href="#ico-pin" xlink:href="#ico-pin"/></svg> Calle Cayetano Bellozo 8, 45000 Villa Ansina, Tacuarembó, Uruguay</p>
+      <p><svg class="ico"><use href="#ico-clock" xlink:href="#ico-clock"/></svg> Horarios: lunes a sábados · 09:00 a 20:00</p>
+    </div>
+    <div class="contact">
+      <h3>Reservas rápidas</h3>
+      <p>¿Ya sabés qué masaje querés? Podés escribirnos directamente por WhatsApp.</p>
+      <a class="btn whatsapp" id="contactButton" target="_blank"><svg class="ico"><use href="#ico-chat" xlink:href="#ico-chat"/></svg> Consultar por WhatsApp</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-logo">RENUEVA</div>
+  <div>Tu cuerpo, libera tu vitalidad.</div>
+  <div style="margin-top:10px">Villa Ansina · Tacuarembó · Uruguay</div>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+/* =========================
+   CONFIGURACIÓN DEL NEGOCIO
+   =========================
+   Cambiá SOLO estos datos para personalizar los contactos.
+*/
+const CONFIG = {
+  whatsapp: "59898380566", // Número de WhatsApp de RENUEVA, sin + ni espacios
+  phone: "+598 98 380 566",
+  instagram: "@renueva_libera"
+};
+
+const services = [
+ {name:"Masaje relajante",duration:"60 min",price:1000,icon:"hand",desc:"Alivia el estrés, relaja la mente y libera tensiones acumuladas."},
+ {name:"Masaje descontracturante",duration:"45 min",price:850,icon:"fist",desc:"Reduce la contractura, mejora la movilidad y ayuda a eliminar nudos musculares."},
+ {name:"Masaje descontracturante",duration:"90 min",price:1400,icon:"fist",desc:"Trabaja en profundidad los músculos y ayuda a aliviar el dolor ciático y lumbar."},
+ {name:"Masaje linfático piernas",duration:"30–40 min",price:850,icon:"drop",desc:"Estimula el sistema linfático, reduce la retención de líquidos y mejora la circulación."},
+ {name:"Masaje linfático abdomen",duration:"30–40 min",price:850,icon:"drop",desc:"Estimula el sistema linfático, ayuda a reducir la retención de líquidos y favorece la digestión."},
+ {name:"Masaje linfático piernas + abdomen",duration:"50–60 min",price:1100,icon:"sparkle",desc:"Estimula el sistema linfático, reduce la sensación de pesadez y favorece la circulación."},
+ {name:"Masaje linfático cuerpo completo",duration:"75–90 min",price:1500,icon:"lotus",desc:"Estimula el sistema linfático, desintoxica el cuerpo y promueve bienestar integral."},
+ {name:"Premium Relax + piedras calientes",duration:"60 min",price:1300,icon:"stone",desc:"Relajación profunda con piedras calientes que ayudan a aliviar tensiones y equilibrar tu energía."},
+ {name:"Masaje aromático",duration:"60 min",price:null,icon:"leaf",desc:"Masaje de relajación acompañado de aceites aromáticos seleccionados para una experiencia sensorial."},
+ {name:"Masaje para parejas",duration:"60 min",price:null,icon:"heart",desc:"Un momento compartido de conexión, relajación y bienestar para dos personas."}
+];
+
+const money = n => n == null ? "Consultar" : "$" + n.toLocaleString("es-UY");
+
+function renderServices(){
+  const box=document.getElementById("services"), select=document.getElementById("service");
+  services.forEach((s,i)=>{
+    box.insertAdjacentHTML("beforeend",`
+      <article class="card">
+        <div class="number">${i+1}</div>
+        <div class="icon"><svg class="ico"><use href="#ico-${s.icon}" xlink:href="#ico-${s.icon}"/></svg></div>
+        <h3>${s.name}</h3><div class="duration">${s.duration}</div>
+        <p>${s.desc}</p><div class="price">${money(s.price)}</div>
+        <button class="smallbtn" onclick="chooseService(${i})">Reservar</button>
+      </article>`);
+    select.insertAdjacentHTML("beforeend",`<option value="${i}">${s.name} · ${s.duration} · ${money(s.price)}</option>`);
+  });
+}
+function chooseService(i){
+  document.getElementById("service").value=i;
+  document.getElementById("agenda").scrollIntoView({behavior:"smooth"});
+}
+function loadTimes(){
+  const t=document.getElementById("time"); t.innerHTML="";
+  for(let h=9;h<=19;h++){
+    ["00","30"].forEach(m=>{
+      if(h===19 && m==="30") return;
+      t.insertAdjacentHTML("beforeend",`<option>${String(h).padStart(2,"0")}:${m}</option>`);
+    });
+  }
+}
+function setupConfig(){
+  const clean = CONFIG.whatsapp.replace(/\D/g,"");
+  const wa = `https://wa.me/${clean}`;
+  document.getElementById("heroWhatsapp").href=wa;
+  document.getElementById("contactWhatsapp").href=wa;
+  document.getElementById("contactButton").href=wa;
+  document.getElementById("contactWhatsapp").textContent=CONFIG.whatsapp.includes("X")?"Configurar número":CONFIG.whatsapp;
+  document.getElementById("contactPhone").textContent=CONFIG.phone;
+  const handle=CONFIG.instagram.replace(/^@/,"");
+  const igUrl=`https://www.instagram.com/${handle}/`;
+  const ig=document.getElementById("instagramLink");
+  if(ig){ ig.href=igUrl; ig.textContent=CONFIG.instagram; }
+  const heroIg=document.getElementById("heroInstagram");
+  if(heroIg){ heroIg.href=igUrl; }
+}
+function setMinDate(){
+  const d=new Date(), iso=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().split("T")[0];
+  document.getElementById("date").min=iso;
+}
+function toast(msg){
+  const el=document.getElementById("toast"); el.textContent=msg; el.classList.add("show");
+  setTimeout(()=>el.classList.remove("show"),3500);
+}
+document.getElementById("bookingForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  if(CONFIG.whatsapp.includes("X")){toast("Primero configurá el número de WhatsApp en CONFIG del HTML.");return;}
+  const s=services[Number(document.getElementById("service").value)];
+  const mode=document.getElementById("mode").value, city=document.getElementById("city").value;
+  const msg=`Hola RENUEVA 👋%0A%0AQuiero solicitar una reserva:%0A%0A💆 Masaje: ${s.name} (${s.duration})%0A💰 Precio: ${money(s.price)}%0A📍 Modalidad: ${mode}%0A📌 Localidad: ${city}%0A📅 Fecha: ${document.getElementById("date").value}%0A🕐 Hora: ${document.getElementById("time").value}%0A👤 Nombre: ${document.getElementById("name").value}%0A📱 Teléfono: ${document.getElementById("phone").value}%0A📝 Notas: ${document.getElementById("notes").value || "Sin notas"}%0A%0A¿Podrían confirmarme la disponibilidad?`;
+  window.open(`https://wa.me/${CONFIG.whatsapp.replace(/\D/g,"")}?text=${msg}`,"_blank");
+});
+renderServices(); loadTimes(); setupConfig(); setMinDate();
+</script>
+</body>
+</html>
